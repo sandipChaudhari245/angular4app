@@ -1,4 +1,4 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CourcesComponent } from './cources/cources.component';
 import { DoctordirComponent } from './doctordir/doctordir.component';
@@ -9,7 +9,7 @@ import { of } from 'rxjs';
 import { convertToParamMap } from '@angular/router';
 
 describe('AppRoutingModule', () => {
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
         RouterTestingModule.withRoutes([])

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CourcesComponent } from './cources.component';
 import { CourcesService } from '../cources.service';
 
@@ -7,7 +7,7 @@ describe('CourcesComponent', () => {
   let fixture: ComponentFixture<CourcesComponent>;
   let mockCourcesService: jasmine.SpyObj<CourcesService>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     mockCourcesService = jasmine.createSpyObj('CourcesService', ['getCources']);
     mockCourcesService.getCources.and.returnValue(['Cources1', 'Cources2', 'Cources3']);
 

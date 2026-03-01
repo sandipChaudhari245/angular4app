@@ -3,6 +3,7 @@ import { CourcesService } from '../cources.service';
 
 @Component({
   selector: 'app-cources',
+  standalone: false,
   templateUrl: './cources.component.html',
   styleUrls: ['./cources.component.css']
 })

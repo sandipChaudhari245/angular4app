@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-userapp',
+  standalone: false,
   templateUrl: './userapp.component.html',
   styleUrls: ['./userapp.component.css']
 })

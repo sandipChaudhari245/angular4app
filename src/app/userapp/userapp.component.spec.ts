@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 import { UserappComponent } from './userapp.component';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
@@ -12,7 +12,7 @@ describe('UserappComponent', () => {
     paramMap: of(convertToParamMap({ username: 'testuser' }))
   };
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [UserappComponent],
       providers: [
